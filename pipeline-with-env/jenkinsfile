@@ -6,10 +6,29 @@ pipeline{
                 deleteDir()
             }
         }
-        stage('Scan files'){
+        stage('Stage-A'){
             steps{
-                echo "Test Build $BUILD_NUMBER"
+                echo "Test Build $BUILD_NUMBER > myFile.txt"
             }
+            post{
+                success {
+                    echo "Stage A success"
+                }
+                failure {
+                    sh "Stage A failure"
+                }
+            }
+        }
+        stage ("Stage B - figlet") {
+            steps {
+                echo "Executing Figlet"
+                sh 'figlet -c Pipeline works with figlet'
+            }
+            post {
+                failure{
+                    sh "apt-get update && apt-get install figlet"
+                }
+            } 
         }
     }
 }
