@@ -32,6 +32,7 @@ pipeline{
         stage ("Debug Sudo Access") {
             steps {
                 sh "whoami"
+                sh 'echo "password"'
             }
         }
         stage ("Stage B - figlet") {
@@ -41,7 +42,7 @@ pipeline{
             }
             post {
                 failure{
-                    sh "apt-get update && apt-get install -y figlet"
+                    sh "sudo apt-get update && sudo apt-get install -y figlet"
                 }
             }
         }
