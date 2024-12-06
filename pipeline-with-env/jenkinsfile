@@ -3,12 +3,13 @@ pipeline{
     stages {
         stage('Clean-up'){
             steps{
+                echo "Executing build #$BUILD_NUMBER. Deleting previous files"
                 deleteDir()
             }
         }
         stage('Stage-A'){
             steps{
-                echo "Test Build $BUILD_NUMBER > myFile.txt"
+                echo "Running job $JOB_NAME "
             }
             post{
                 success {
