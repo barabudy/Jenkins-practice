@@ -31,7 +31,7 @@ pipeline{
         }
         stage ("Debug Sudo Access") {
             steps {
-                sh "sudo whoami"
+                sh "whoami"
             }
         }
         stage ("Stage B - figlet") {
