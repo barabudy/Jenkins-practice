@@ -29,12 +29,6 @@ pipeline{
                 }
             }
         }
-        stage ("Debug Sudo Access") {
-            steps {
-                sh "whoami"
-                sh 'echo "password"'
-            }
-        }
         stage ("Stage B - figlet") {
             steps {
                 echo "Executing Figlet"
