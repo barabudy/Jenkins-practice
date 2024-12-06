@@ -3,7 +3,7 @@ pipeline{
     environment {
         DEV_NAME = "Bar"
         REPO_NAME = "Jenkins-practice"
-        REPO_URL = "https://github.com/barabudy/Jenkins-practice"
+        REPO_URL = "https://github.com"
         GIT_USER = "barabudy"
     }
 
