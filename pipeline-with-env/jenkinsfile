@@ -17,6 +17,7 @@ pipeline{
         stage('Stage-A'){
             steps{
                 echo "Running job $JOB_NAME for developer $DEV_NAME"
+                echo "$REPO_URL/$GIT_USER/$REPO_NAME"
                 // sh "git clone $REPO_URL/$GIT_USER/$REPO_NAME" - Can be used to clone repo with var
             }
             post{
