@@ -10,7 +10,7 @@ pipeline{
         }
         stage('Scan files'){
             steps{
-                echo ""
+                echo "Test of remote SCM works"
             }
         }
     }
