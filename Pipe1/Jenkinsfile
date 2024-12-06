@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages {
+        stage('Step-A'){
+            steps{
+                echo "===step A==="
+            }
+        }
+        stage('Step-B'){
+            steps{
+                echo "---step B---"
+            }
+        }
+    }
+}
