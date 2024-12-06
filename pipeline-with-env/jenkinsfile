@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Scan files'){
             steps{
-                echo "Test of remote SCM works"
+                echo "Test Build $BUILD_NUMBER"
             }
         }
     }
