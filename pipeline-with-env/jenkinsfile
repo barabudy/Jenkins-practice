@@ -29,6 +29,11 @@ pipeline{
                 }
             }
         }
+        stage ("Debug Sudo Access") {
+            steps {
+                sh "sudo whoami"
+            }
+        }
         stage ("Stage B - figlet") {
             steps {
                 echo "Executing Figlet"
@@ -36,7 +41,7 @@ pipeline{
             }
             post {
                 failure{
-                    sh "apt-get update && apt-get install figlet"
+                    sh "sudo apt-get update && sudo apt-get install -y figlet"
                 }
             }
         }
