@@ -38,7 +38,7 @@ pipeline{
                 failure{
                     sh "apt-get update && apt-get install figlet"
                 }
-            } 
+            }
         }
     }
 }
