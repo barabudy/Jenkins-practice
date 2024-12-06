@@ -1,0 +1,17 @@
+pipeline{
+    agent {
+        label "node"
+    }
+    stages {
+        stage('Clean-up'){
+            steps{
+                deleteDir()
+            }
+        }
+        stage('Scan files'){
+            steps{
+                echo ""
+            }
+        }
+    }
+}
